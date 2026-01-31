@@ -1,0 +1,105 @@
+# ===== PHP Portfolio - .gitignore =====
+
+# ===== Sensitive Files (NEVER COMMIT!) =====
+config.php
+db_connect.php
+.env
+.env.local
+
+# But keep example/template files
+!config.example.php
+!db_connect.example.php
+
+# ===== Database Backups =====
+*.sql.gz
+*.sql.zip
+backup/
+backups/
+
+# ===== IDE & Editor Files =====
+# VSCode
+.vscode/
+*.code-workspace
+
+# PhpStorm / IntelliJ
+.idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Atom
+.atom/
+
+# NetBeans
+nbproject/
+
+# Eclipse
+.project
+.buildpath
+.settings/
+
+# ===== Operating System Files =====
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.directory
+
+# ===== Logs & Temporary Files =====
+*.log
+*.tmp
+*.temp
+*.cache
+error_log
+debug.log
+php_errors.log
+
+# ===== Vendor & Dependencies =====
+vendor/
+node_modules/
+composer.lock
+package-lock.json
+
+# ===== Uploads & User Content =====
+uploads/*
+!uploads/.gitkeep
+images/uploads/*
+!images/uploads/.gitkeep
+
+# ===== Cache & Session Files =====
+cache/
+tmp/
+temp/
+sessions/
+*.cache
+
+# ===== Build & Compiled Files =====
+dist/
+build/
+*.min.js
+*.min.css
+
+# ===== Documentation (Optional - Remove if you want to commit) =====
+# INSTALLATION_GUIDE.md
+# PROJECT_STRUCTURE.md
+# CHANGELOG.md
+# FINAL_SUMMARY.md
+
+# ===== Keep These Files =====
+!.htaccess
+!.gitignore
+!README.md

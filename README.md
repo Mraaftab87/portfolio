@@ -1,204 +1,170 @@
-# Modern Portfolio Website - Aaftab I. Gori
+# Modern Portfolio Website
 
-A sleek, dark-themed portfolio website built with vanilla PHP, MySQL, and Bootstrap 5. Features smooth animations, interactive hover effects, and a modern neon cyan accent color scheme.
+A clean, dark-themed portfolio built with PHP, MySQL, and Bootstrap 5. Simple, fast, and responsive.
 
-## Features
+![PHP](https://img.shields.io/badge/PHP-7.4+-777BB4?style=flat&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-5.7+-4479A1?style=flat&logo=mysql&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.2-7952B3?style=flat&logo=bootstrap&logoColor=white)
 
-- **Modern Dark Theme** with high contrast (#1a1a2e background, #e0e0e0 text, #00adb5 neon cyan accents)
-- **"Open to Opportunities" Badge** with pulsating live indicator - clearly shows availability for internships
-- **Professional Opportunity Statement** with warm, confident copy highlighting skills and readiness
-- **Interactive Hover Effects**: Project cards lift and glow, skill pills transform with smooth transitions
-- **Fully Responsive** design that works seamlessly on all devices
-- **Dynamic Content**: Projects and skills fetched from MySQL database
-- **Animated Status Badges**: "In Progress" projects pulse with orange glow
-- **Contact Form** with database storage and validation
-- **Admin Panel** to view and manage contact messages
-- **Clean Modular Code** with separated concerns and best practices
-- **SEO Friendly** with proper meta tags and semantic HTML
+## What's Inside
 
-## Folder Structure
+This is a straightforward portfolio website I built to showcase my work. It's got a dark theme with cyan accents, smooth animations, and works great on mobile.
+
+**Key stuff:**
+- Dark theme that's easy on the eyes
+- "Open to Opportunities" badge (because I'm actively looking!)
+- Projects and skills pulled from a MySQL database
+- Contact form that actually works
+- Simple admin panel to check messages
+- Responsive design - looks good everywhere
+
+## Quick Setup
+
+You'll need PHP 7.4+, MySQL 5.7+, and a local server (XAMPP works great).
+
+**Get it running:**
+
+```bash
+# Clone it
+git clone https://github.com/yourusername/portfolio.git
+cd portfolio
+
+# Create database
+mysql -u root -p
+CREATE DATABASE portfolio_db;
+exit;
+
+# Import the schema
+mysql -u root -p portfolio_db < database.sql
+
+# Copy config files
+cp db_connect.example.php db_connect.php
+cp config.example.php config.php
+
+# Edit with your info
+nano db_connect.php  # Add your database credentials
+nano config.php      # Add your personal info
+```
+
+That's it. Open `http://localhost/portfolio` and you're good to go.
+
+## Project Structure
 
 ```
 portfolio/
-├── admin/
-│   └── view_messages.php      # Admin panel for viewing contact messages
-├── assets/
-│   └── css/
-│       └── style.css          # Custom CSS with dark theme and animations
-├── includes/
-│   ├── header.php             # Navigation and HTML head
-│   └── footer.php             # Footer and scripts
-├── index.php                  # Homepage (Hero, About, Skills)
-├── projects.php               # Projects showcase page
-├── contact.php                # Contact form
-├── config.php                 # Site configuration
-├── db_connect.php             # Database connection
-├── database.sql               # Database schema and sample data
-├── .htaccess                  # Apache configuration
-└── README.md                  # This file
+├── admin/              # Admin panel for messages
+├── assets/css/         # Styling
+├── includes/           # Header and footer
+├── index.php           # Homepage
+├── projects.php        # Projects page
+├── contact.php         # Contact form
+├── config.php          # Your settings (not in Git)
+├── db_connect.php      # Database connection (not in Git)
+└── database.sql        # Database schema
 ```
-
-## Installation & Setup
-
-### Prerequisites
-- PHP 7.4 or higher
-- MySQL 5.7 or higher
-- Apache/Nginx web server (XAMPP, WAMP, or LAMP)
-
-### Step 1: Clone or Download
-Download the portfolio folder to your web server's root directory (e.g., `htdocs` for XAMPP).
-
-### Step 2: Create Database
-1. Open phpMyAdmin or MySQL command line
-2. Import the `database.sql` file or run the SQL queries manually
-3. This will create the `portfolio_db` database with sample data
-
-### Step 3: Configure Database Connection
-Open `db_connect.php` and update the database credentials if needed:
-```php
-$host = 'localhost';
-$dbname = 'portfolio_db';
-$username = 'root';  // Your MySQL username
-$password = '';      // Your MySQL password
-```
-
-### Step 4: Update Configuration
-Open `config.php` and update your personal information, social links, and site details.
-
-### Step 5: Access the Website
-Open your browser and navigate to:
-```
-http://localhost/portfolio/
-```
-
-### Step 6: Admin Panel (Optional)
-- Access: `http://localhost/portfolio/admin/view_messages.php`
-- Default password: `admin123` (⚠️ Change this in `admin/view_messages.php`)
-- View, mark as read, and delete contact messages
-
-## Pages
-
-1. **Home (index.php)**: Hero section, About Me, and Skills showcase
-2. **Projects (projects.php)**: Dynamic project listings from database
-3. **Contact (contact.php)**: Contact form with database integration
-
-## Database Tables
-
-### projects
-- `id`: Primary key
-- `title`: Project name
-- `description`: Project details
-- `technologies`: Comma-separated tech stack
-- `status`: 'Completed', 'In Progress', or 'Planned'
-- `image_url`: Project image (optional)
-- `project_url`: Live demo link (optional)
-- `github_url`: GitHub repository link (optional)
-- `created_at`: Timestamp
-- `updated_at`: Timestamp
-
-### contact_messages
-- `id`: Primary key
-- `name`: Sender name
-- `email`: Sender email
-- `subject`: Message subject
-- `message`: Message content
-- `is_read`: Read status (boolean)
-- `created_at`: Timestamp
-
-### skills
-- `id`: Primary key
-- `skill_name`: Name of the skill
-- `category`: Category (e.g., Frontend, Backend, Tools)
-- `proficiency`: Skill level (0-100)
-- `created_at`: Timestamp
 
 ## Customization
 
-### Update Personal Information
-Edit `config.php` to update your details:
-- Name, role, email, phone
-- Social media links (GitHub, LinkedIn, Twitter)
-- Site metadata
-
-### Add New Projects
-Insert new projects directly into the database via phpMyAdmin:
-```sql
-INSERT INTO projects (title, description, technologies, status, github_url, project_url) 
-VALUES ('Project Name', 'Description here', 'PHP, MySQL, Bootstrap', 'Completed', 'github-url', 'live-url');
-```
-
-### Add New Skills
-Add skills to showcase your expertise:
-```sql
-INSERT INTO skills (skill_name, category, proficiency) 
-VALUES ('React', 'Frontend', 85);
-```
-
-### Modify Colors
-Update CSS variables in `assets/css/style.css`:
+**Change colors** - Edit `assets/css/style.css`:
 ```css
 :root {
-    --bg-dark: #1a1a2e;           /* Main background */
-    --accent-primary: #00adb5;     /* Neon cyan accent */
-    --text-light: #e0e0e0;         /* Text color */
-    --card-bg: #0f3460;            /* Card background */
+    --bg-dark: #1a1a2e;
+    --accent-primary: #00adb5;
+    --text-light: #e0e0e0;
 }
 ```
 
-## Key Design Features
+**Add projects** - Just insert into the database:
+```sql
+INSERT INTO projects (title, description, technologies, status, github_url) 
+VALUES ('My Project', 'What it does', 'PHP, MySQL', 'Completed', 'github.com/...');
+```
 
-### Interactive Hover Effects
-- **Project Cards**: Lift up 10px with glowing cyan shadow on hover
-- **Skill Pills**: Transform and glow when hovered
-- **Buttons**: Smooth color transitions and elevation
-- **Navigation Links**: Animated underline effect
-- **Social Icons**: Rotate 360° on hover with glow
+**Update your info** - Edit `config.php`:
+```php
+define('USER_NAME', 'Your Name');
+define('USER_EMAIL', 'your@email.com');
+define('GITHUB_URL', 'https://github.com/yourusername');
+```
 
-### Status Badges
-- **Completed**: Green badge with static styling
-- **In Progress**: Orange badge with pulsing animation (highlights active work)
-- **Planned**: Red badge for future projects
+## Database Tables
 
-### Typography
-- **Font Family**: Poppins (Google Fonts) for modern, clean look
-- **Font Weights**: 300-700 for hierarchy
-- **High Contrast**: Off-white text on dark background for readability
+Three simple tables:
 
-## Technologies Used
+**projects** - Your portfolio items
+- title, description, technologies, status, links, timestamps
 
-- **Backend**: PHP (Vanilla) with PDO
-- **Database**: MySQL 5.7+
-- **Frontend**: HTML5, CSS3, JavaScript
-- **Framework**: Bootstrap 5.3.2
-- **Icons**: Bootstrap Icons 1.11.1
-- **Fonts**: Google Fonts (Poppins)
-- **Server**: Apache with .htaccess
+**contact_messages** - Form submissions
+- name, email, subject, message, read status, timestamp
+
+**skills** - Your skills list
+- skill name, category, proficiency level, timestamp
+
+## Admin Panel
+
+Check messages at `/admin/view_messages.php`
+
+Default password is `admin123` - **change it** in `admin/view_messages.php` line 6.
 
 ## Security Notes
 
-⚠️ **Important Security Measures:**
-- Change the admin password in `admin/view_messages.php` (default: `admin123`)
-- Use prepared statements (already implemented with PDO)
-- Keep `db_connect.php` and `config.php` secure
-- Consider adding HTTPS in production
-- Implement proper session management for admin panel
-- Update `.htaccess` to protect sensitive files
+Before going live:
+- Change the admin password
+- Turn off error display in `.htaccess`
+- Enable HTTPS redirect
+- Update database credentials
+- Check file permissions
 
-## Browser Support
+The `.htaccess` file already has security headers and file protection set up.
 
-- Chrome (latest) ✓
-- Firefox (latest) ✓
-- Safari (latest) ✓
-- Edge (latest) ✓
-- Mobile browsers ✓
+## Tech Stack
 
-## Author
+- PHP (vanilla, no frameworks)
+- MySQL with PDO
+- Bootstrap 5 for the grid
+- Custom CSS for the theme
+- Vanilla JavaScript for interactions
 
-**Aaftab I. Gori**
-- BCA Student (Final Year)
-- Aspiring Developer
-- Open to Internship & Junior Developer Opportunities
+## What's Protected
+
+These files are in `.gitignore` and won't be committed:
+- `config.php` - Your actual credentials
+- `db_connect.php` - Your database password
+- Any `.env` files
+- Logs and cache
+
+The `*.example.php` files are templates you can safely share.
+
+## Contributing
+
+Found a bug? Want to add something? Pull requests are welcome.
+
+Just fork it, make your changes, and submit a PR. Keep the code clean and test your changes.
 
 ## License
 
-This project is open source and available for personal and educational use.
+MIT License - use it however you want.
+
+## Author
+
+Built by Aaftab I. Gori
+
+- GitHub: [@aaftabgori](https://github.com/aaftabgori)
+- LinkedIn: [Aaftab I. Gori](https://linkedin.com/in/aaftabgori)
+
+Currently a final year BCA student looking for internship and junior developer opportunities.
+
+## Deployment
+
+Works on any PHP hosting. I've tested it on:
+- Shared hosting (cPanel)
+- VPS with Apache
+- Local development (XAMPP, WAMP)
+
+Just upload the files, import the database, update your config, and you're live.
+
+## Notes
+
+This is a real portfolio I'm actually using. The code is clean, commented, and easy to modify. No bloat, no unnecessary dependencies.
+
+If you use this, drop me a message - I'd love to see what you build with it.

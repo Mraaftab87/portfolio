@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 <!-- Contact Section -->
-<section class="contact-section py-5">
+<section class="contact-section py-5" style="padding-top: 120px !important;">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto">

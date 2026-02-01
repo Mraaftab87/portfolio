@@ -23,7 +23,6 @@ define('USER_LOCATION', 'Your City, Country');
 // ===== Social Media Links =====
 define('GITHUB_URL', 'https://github.com/yourusername');
 define('LINKEDIN_URL', 'https://linkedin.com/in/yourusername');
-define('TWITTER_URL', 'https://twitter.com/yourusername');
 
 // ===== Additional Settings (Optional) =====
 // define('FACEBOOK_URL', 'https://facebook.com/yourusername');

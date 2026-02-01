@@ -74,11 +74,9 @@ portfolio/
 }
 ```
 
-**Add projects** - Just insert into the database:
-```sql
-INSERT INTO projects (title, description, technologies, status, github_url) 
-VALUES ('My Project', 'What it does', 'PHP, MySQL', 'Completed', 'github.com/...');
-```
+**Add projects** - Edit `projects.php` and add your project card
+
+**Add skills** - Edit `index.php` skills section
 
 **Update your info** - Edit `config.php`:
 ```php
@@ -89,16 +87,12 @@ define('GITHUB_URL', 'https://github.com/yourusername');
 
 ## Database Tables
 
-Three simple tables:
-
-**projects** - Your portfolio items
-- title, description, technologies, status, links, timestamps
+One simple table:
 
 **contact_messages** - Form submissions
 - name, email, subject, message, read status, timestamp
 
-**skills** - Your skills list
-- skill name, category, proficiency level, timestamp
+Projects and skills are hardcoded in the PHP files for simplicity.
 
 ## Admin Panel
 

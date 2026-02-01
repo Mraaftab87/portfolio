@@ -13,9 +13,6 @@
                         <a href="<?php echo LINKEDIN_URL; ?>" target="_blank" class="social-link">
                             <i class="bi bi-linkedin"></i>
                         </a>
-                        <a href="<?php echo TWITTER_URL; ?>" target="_blank" class="social-link">
-                            <i class="bi bi-twitter"></i>
-                        </a>
                     </div>
                 </div>
             </div>

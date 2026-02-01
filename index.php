@@ -1,14 +1,6 @@
 <?php
 require_once 'db_connect.php';
 require_once 'includes/header.php';
-
-// Fetch skills from database
-try {
-    $stmt = $pdo->query("SELECT * FROM skills ORDER BY category, proficiency DESC");
-    $skills = $stmt->fetchAll();
-} catch(PDOException $e) {
-    $skills = [];
-}
 ?>
 
 <!-- Hero Section -->
@@ -109,25 +101,73 @@ try {
             <div class="col-lg-10 mx-auto">
                 <h2 class="section-title text-center mb-5">Skills & Technologies</h2>
                 <div class="skills-container">
-                    <?php
-                    $categories = [];
-                    foreach ($skills as $skill) {
-                        $categories[$skill['category']][] = $skill;
-                    }
-                    
-                    foreach ($categories as $category => $categorySkills):
-                    ?>
+                    <!-- Frontend -->
                     <div class="skill-category mb-4">
-                        <h4 class="category-title"><?php echo htmlspecialchars($category); ?></h4>
+                        <h4 class="category-title">Frontend</h4>
                         <div class="skills-pills">
-                            <?php foreach ($categorySkills as $skill): ?>
-                            <span class="skill-pill">
-                                <?php echo htmlspecialchars($skill['skill_name']); ?>
-                            </span>
-                            <?php endforeach; ?>
+                            <span class="skill-pill">HTML5</span>
+                            <span class="skill-pill">CSS3</span>
+                            <span class="skill-pill">JavaScript</span>
+                            <span class="skill-pill">Bootstrap</span>
                         </div>
                     </div>
-                    <?php endforeach; ?>
+
+                    <!-- Backend -->
+                    <div class="skill-category mb-4">
+                        <h4 class="category-title">Backend</h4>
+                        <div class="skills-pills">
+                            <span class="skill-pill">PHP</span>
+                        </div>
+                    </div>
+
+                    <!-- Mobile -->
+                    <div class="skill-category mb-4">
+                        <h4 class="category-title">Mobile</h4>
+                        <div class="skills-pills">
+                            <span class="skill-pill">Android</span>
+                            <span class="skill-pill">Kotlin</span>
+                        </div>
+                    </div>
+
+                    <!-- Programming -->
+                    <div class="skill-category mb-4">
+                        <h4 class="category-title">Programming</h4>
+                        <div class="skills-pills">
+                            <span class="skill-pill">Python</span>
+                        </div>
+                    </div>
+
+                    <!-- Database -->
+                    <div class="skill-category mb-4">
+                        <h4 class="category-title">Database</h4>
+                        <div class="skills-pills">
+                            <span class="skill-pill">MySQL</span>
+                        </div>
+                    </div>
+
+                    <!-- AI/ML -->
+                    <div class="skill-category mb-4">
+                        <h4 class="category-title">AI/ML</h4>
+                        <div class="skills-pills">
+                            <span class="skill-pill">Prompt Engineering</span>
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="skill-category mb-4">
+                        <h4 class="category-title">Tools</h4>
+                        <div class="skills-pills">
+                            <span class="skill-pill">Git</span>
+                        </div>
+                    </div>
+
+                    <!-- CMS -->
+                    <div class="skill-category mb-4">
+                        <h4 class="category-title">CMS</h4>
+                        <div class="skills-pills">
+                            <span class="skill-pill">WordPress</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

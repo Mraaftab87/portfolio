@@ -99,12 +99,12 @@ a:hover {
     align-items: center;
     position: relative;
     background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-darker) 100%);
-    padding-top: 100px;  /* Navbar ke liye space - IMPORTANT! */
+    padding-top: 60px;  /* Further reduced for better spacing */
 }
 
 .hero-content {
     animation: fadeInUp 1s ease;
-    padding-top: 2rem;  /* Extra space upar se */
+    padding-top: 0;
 }
 
 @keyframes fadeInUp {
@@ -127,8 +127,8 @@ a:hover {
     border: 2px solid var(--accent-primary);
     padding: 0.75rem 1.5rem;
     border-radius: 50px;
-    margin-top: 0;           /* Upar se margin remove */
-    margin-bottom: 3.5rem;   /* Title se ZYADA gap */
+    margin-top: 0;
+    margin-bottom: 1.5rem;   /* Further reduced for tighter spacing */
     animation: fadeInDown 1s ease 0.3s both;
     box-shadow: 0 0 20px rgba(0, 173, 181, 0.3);
 }

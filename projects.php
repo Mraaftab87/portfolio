@@ -34,7 +34,7 @@ require_once 'includes/header.php';
                                 </div>
                             </div>
                             <div class="project-card-footer">
-                                <a href="https://github.com/aaftabgori/inventory-system" 
+                                <a href="https://github.com/Mraaftab87/college_project" 
                                    target="_blank" 
                                    class="btn btn-sm btn-outline-primary">
                                     <i class="bi bi-github me-1"></i>View Code

@@ -63,7 +63,7 @@ require_once 'includes/header.php';
                                 </div>
                             </div>
                             <div class="project-card-footer">
-                                <a href="https://github.com/aaftabgori/ai-expense-manager" 
+                                <a href="https://github.com/aaftabgori/expense-manager" 
                                    target="_blank" 
                                    class="btn btn-sm btn-outline-primary">
                                     <i class="bi bi-github me-1"></i>View Code

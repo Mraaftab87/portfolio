@@ -13,12 +13,54 @@ require_once 'includes/header.php';
                 </div>
 
                 <div class="row">
-                    <!-- Project 1: Inventory Management -->
+                    <!-- Project 1: SecureVault Password Manager -->
                     <div class="col-md-6 mb-4">
                         <div class="project-card">
                             <div class="project-card-header">
-                                <h3 class="project-title">Inventory Management System</h3>
-                                <span class="project-status status-completed">Completed</span>
+                                <div class="project-icon">
+                                    <i class="bi bi-shield-lock-fill"></i>
+                                </div>
+                                <div class="project-header-content">
+                                    <h3 class="project-title">SecureVault Password Manager</h3>
+                                    <span class="project-status status-completed">Completed</span>
+                                </div>
+                            </div>
+                            <div class="project-card-body">
+                                <p class="project-description">
+                                    Full-featured password manager with military-grade AES-256-GCM encryption 
+                                    and Argon2id hashing. Features zero-knowledge architecture, 2FA authentication, 
+                                    breach detection, and secure password generation. Built with security-first approach.
+                                </p>
+                                <div class="project-technologies">
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">MySQL</span>
+                                    <span class="tech-badge">Bootstrap</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                    <span class="tech-badge">OpenSSL</span>
+                                    <span class="tech-badge">Argon2id</span>
+                                </div>
+                            </div>
+                            <div class="project-card-footer">
+                                <a href="https://github.com/aaftabgori" 
+                                   target="_blank" 
+                                   class="btn btn-sm btn-outline-primary">
+                                    <i class="bi bi-github me-1"></i>View Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Inventory Management -->
+                    <div class="col-md-6 mb-4">
+                        <div class="project-card">
+                            <div class="project-card-header">
+                                <div class="project-icon">
+                                    <i class="bi bi-box-seam-fill"></i>
+                                </div>
+                                <div class="project-header-content">
+                                    <h3 class="project-title">Inventory Management System</h3>
+                                    <span class="project-status status-completed">Completed</span>
+                                </div>
                             </div>
                             <div class="project-card-body">
                                 <p class="project-description">
@@ -43,12 +85,17 @@ require_once 'includes/header.php';
                         </div>
                     </div>
 
-                    <!-- Project 2: AI Expense Manager -->
+                    <!-- Project 3: AI Expense Manager -->
                     <div class="col-md-6 mb-4">
                         <div class="project-card">
                             <div class="project-card-header">
-                                <h3 class="project-title">AI Expense Manager</h3>
-                                <span class="project-status status-in-progress">In Progress</span>
+                                <div class="project-icon">
+                                    <i class="bi bi-wallet2"></i>
+                                </div>
+                                <div class="project-header-content">
+                                    <h3 class="project-title">AI Expense Manager</h3>
+                                    <span class="project-status status-in-progress">In Progress</span>
+                                </div>
                             </div>
                             <div class="project-card-body">
                                 <p class="project-description">

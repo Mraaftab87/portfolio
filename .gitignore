@@ -15,6 +15,7 @@ db_connect.php
 *.sql.zip
 backup/
 backups/
+portfolio.zip
 
 # ===== IDE & Editor Files =====
 # VSCode

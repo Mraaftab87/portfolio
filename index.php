@@ -56,6 +56,8 @@ require_once 'includes/header.php';
                     <p class="lead text-center mb-4">
                         I'm a final-year BCA student with a passion for technology and problem-solving. 
                         My journey in software development has been driven by curiosity and a genuine love for coding. 
+                        With hands-on experience in building secure applications including a password manager with 
+                        military-grade encryption, I understand the importance of security in modern web development. 
                         I thrive on turning ideas into functional applications and I'm eager to contribute my skills 
                         to a dynamic team where I can grow and make an impact.
                     </p>
@@ -158,6 +160,19 @@ require_once 'includes/header.php';
                         <h4 class="category-title">Tools</h4>
                         <div class="skills-pills">
                             <span class="skill-pill">Git</span>
+                        </div>
+                    </div>
+
+                    <!-- Security & Encryption -->
+                    <div class="skill-category mb-4">
+                        <h4 class="category-title">Security & Encryption</h4>
+                        <div class="skills-pills">
+                            <span class="skill-pill">AES-256-GCM</span>
+                            <span class="skill-pill">Argon2id</span>
+                            <span class="skill-pill">PBKDF2</span>
+                            <span class="skill-pill">Zero-Knowledge Architecture</span>
+                            <span class="skill-pill">CSRF Protection</span>
+                            <span class="skill-pill">XSS Prevention</span>
                         </div>
                     </div>
 

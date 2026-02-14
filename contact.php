@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <?php endif; ?>
 
                 <div class="contact-form-wrapper">
-                    <form method="POST" action="" class="contact-form">
+                    <form method="POST" action="" class="contact-form" id="contactForm">
                         <div class="row">
                             <div class="col-md-6 mb-4">
                                 <label for="name" class="form-label">Your Name</label>
@@ -63,6 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                        name="name" 
                                        value="<?php echo htmlspecialchars($_POST['name'] ?? ''); ?>"
                                        required>
+                                <div class="invalid-feedback">Please enter your name.</div>
                             </div>
                             <div class="col-md-6 mb-4">
                                 <label for="email" class="form-label">Your Email</label>
@@ -72,6 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                        name="email" 
                                        value="<?php echo htmlspecialchars($_POST['email'] ?? ''); ?>"
                                        required>
+                                <div class="invalid-feedback">Please enter a valid email.</div>
                             </div>
                         </div>
                         <div class="mb-4">
@@ -82,6 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                    name="subject" 
                                    value="<?php echo htmlspecialchars($_POST['subject'] ?? ''); ?>"
                                    required>
+                            <div class="invalid-feedback">Please enter a subject.</div>
                         </div>
                         <div class="mb-4">
                             <label for="message" class="form-label">Message</label>
@@ -89,15 +92,46 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                       id="message" 
                                       name="message" 
                                       rows="6" 
+                                      maxlength="1000"
                                       required><?php echo htmlspecialchars($_POST['message'] ?? ''); ?></textarea>
+                            <div class="form-text"><span id="charCount">0</span>/1000 characters</div>
+                            <div class="invalid-feedback">Please enter your message.</div>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary btn-lg">
+                            <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">
                                 <i class="bi bi-send me-2"></i>Send Message
                             </button>
                         </div>
                     </form>
                 </div>
+
+                <script>
+                // Character counter
+                const messageField = document.getElementById('message');
+                const charCount = document.getElementById('charCount');
+                
+                messageField.addEventListener('input', function() {
+                    charCount.textContent = this.value.length;
+                });
+                
+                // Form validation
+                const form = document.getElementById('contactForm');
+                const submitBtn = document.getElementById('submitBtn');
+                
+                form.addEventListener('submit', function(e) {
+                    if (!form.checkValidity()) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                    } else {
+                        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Sending...';
+                        submitBtn.disabled = true;
+                    }
+                    form.classList.add('was-validated');
+                });
+                
+                // Initialize character count
+                charCount.textContent = messageField.value.length;
+                </script>
 
                 <!-- Contact Info -->
                 <div class="contact-info mt-5">

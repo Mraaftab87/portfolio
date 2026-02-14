@@ -6,7 +6,26 @@ require_once __DIR__ . '/../config.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo SITE_NAME; ?></title>
+    <title><?php echo SITE_NAME; ?> - BCA Student & Aspiring Developer</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of <?php echo USER_NAME; ?> - Final year BCA student specializing in full-stack web development, security, and AI integration. Experienced in PHP, Python, Android development.">
+    <meta name="keywords" content="web developer, BCA student, PHP developer, Python, Android, Kotlin, password manager, secure applications, full-stack developer">
+    <meta name="author" content="<?php echo USER_NAME; ?>">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="<?php echo USER_NAME; ?> - Portfolio">
+    <meta property="og:description" content="Final year BCA student & aspiring developer specializing in secure web applications and full-stack development">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?php echo USER_NAME; ?> - Portfolio">
+    <meta name="twitter:description" content="Final year BCA student & aspiring developer">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

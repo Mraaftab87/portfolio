@@ -1,0 +1,120 @@
+=================================================================
+GITHUB UPLOAD COMMANDS - Copy Paste Karo Terminal Mein
+=================================================================
+
+STEP 1: Git Initialize (Agar pehle se nahi hai)
+-----------------------------------------------------------------
+git init
+
+
+STEP 2: Git Config (Apna naam aur email dalo)
+-----------------------------------------------------------------
+git config user.name "Aaftab I. Gori"
+git config user.email "goriaaftab87@gmail.com"
+
+
+STEP 3: Files Add Karo (.gitignore automatically exclude karega sensitive files)
+-----------------------------------------------------------------
+git add .
+
+
+STEP 4: Commit Karo
+-----------------------------------------------------------------
+git commit -m "Portfolio website with SecureVault project and improvements"
+
+
+STEP 5: GitHub Repository Se Connect Karo
+-----------------------------------------------------------------
+git remote add origin https://github.com/aaftabgori/portfolio.git
+
+
+STEP 6: Push Karo (Pehli baar)
+-----------------------------------------------------------------
+git push -u origin main
+
+
+Agar "main" branch error de, toh ye try karo:
+-----------------------------------------------------------------
+git branch -M main
+git push -u origin main
+
+
+=================================================================
+AGAR REPOSITORY ALREADY EXISTS (Update karna hai)
+=================================================================
+
+git add .
+git commit -m "Updated portfolio with improvements"
+git push origin main
+
+
+=================================================================
+AGAR ERROR AAE: "Repository not found"
+=================================================================
+
+1. GitHub par jao: https://github.com/new
+2. Repository name: portfolio
+3. Public rakho
+4. README mat add karo (already hai)
+5. Create repository
+6. Phir upar ke commands run karo
+
+
+=================================================================
+AGAR ERROR AAE: "Authentication failed"
+=================================================================
+
+Option 1: Personal Access Token Use Karo
+1. GitHub Settings > Developer Settings > Personal Access Tokens
+2. Generate new token (classic)
+3. Permissions: repo (full control)
+4. Copy token
+5. Password ki jagah token paste karo
+
+
+Option 2: GitHub Desktop Use Karo
+1. Download: https://desktop.github.com/
+2. Install karo
+3. Sign in karo
+4. "Add existing repository" select karo
+5. Portfolio folder select karo
+6. Commit aur Push karo
+
+
+=================================================================
+QUICK CHECK: Kya Upload Hoga?
+=================================================================
+
+✅ UPLOAD HOGA:
+   - admin/
+   - assets/
+   - includes/
+   - index.php
+   - projects.php
+   - contact.php
+   - database.sql
+   - .htaccess
+   - .gitignore
+   - All .md files
+   - *.example.php files
+
+❌ UPLOAD NAHI HOGA (Automatically excluded by .gitignore):
+   - config.php (password hai!)
+   - db_connect.php (password hai!)
+   - portfolio.zip
+   - .vscode/
+
+
+=================================================================
+VERIFICATION: Upload Ho Gaya Ya Nahi?
+=================================================================
+
+1. Browser mein jao: https://github.com/aaftabgori/portfolio
+2. Files dikhai dengi
+3. config.php aur db_connect.php NAHI dikhne chahiye
+4. README.md dikhai dega
+
+
+=================================================================
+DONE! 🎉
+=================================================================
